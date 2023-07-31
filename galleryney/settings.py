@@ -23,6 +23,7 @@ SECRET_KEY = 'django-insecure-8id^tp8&3sn8!g+g-zo0t^75sat1-5pf!4r5^*z*lg*m&6073(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#hi
 
 ALLOWED_HOSTS = ['www.galleryney.com', 'galleryney.com','127.0.0.1']
 
