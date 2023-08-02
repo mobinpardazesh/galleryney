@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'localization',
     'loging',
     'mediahelpers',
-    'messages',
     'news',
     'orders',
     'payments',
