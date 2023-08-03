@@ -4,8 +4,10 @@ from django.db import models
 class Country(models.Model):
     country_name = models.CharField('Country',max_length=200,default="iran" ,null=True, blank=True)
     country_code = models.CharField('Code', max_length=10, null=True)
-    iso_code_short = models.CharField('ISO Code Short', max_length=2, null=True)
-    iso_code_long = models.CharField('ISO Code Long', max_length=3, null=True)
+    country_iso_code_short = models.CharField('ISO Code Short', max_length=2, null=True)
+    country_iso_code_long = models.CharField('ISO Code Long', max_length=3, null=True)
+    country_createdate=models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.country_name
 
