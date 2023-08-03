@@ -1,17 +1,17 @@
 from django.contrib import admin
-from .models import Countries, Proviences, Cities
+from .models import Country, Provience, City
 
 
-@admin.register(Countries)
-class CountriesAdmin(admin.ModelAdmin):
-    list_display = ("country_name",)
+@admin.register(Country)
+class CountryAdmin(admin.ModelAdmin):
+    list_display = ("id",)
 
 
-@admin.register(Proviences)
-class ProviencesAmin(admin.ModelAdmin):
-    list_display = ("provience_name","countries")
+@admin.register(Provience)
+class ProvienceAmin(admin.ModelAdmin):
+    list_display = ("provience_name","id")
 
 
-@admin.register(Cities)
-class CitiesAdmin(admin.ModelAdmin):
+@admin.register(City)
+class CityAdmin(admin.ModelAdmin):
     list_display = ("city_name",)
