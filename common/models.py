@@ -16,7 +16,7 @@ class Country(models.Model):
 class Provience(models.Model):
     is_provience_active=models.BooleanField(default=True)
     provience_name = models.CharField('Provience',max_length=200,null=True)
-    provience_center = models.CharField('Code', max_length=10, null=True)
+    provience_center = models.CharField('provience_center', max_length=10, null=True)
     provience_center_code = models.CharField('Provience Code', max_length=10, null=True)
     is_country_center=models.BooleanField(default=False)
     provience_createdate=models.DateTimeField(default=timezone.now)
