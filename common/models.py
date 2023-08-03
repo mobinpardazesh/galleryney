@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 # Create your models here.
 
 class Country(models.Model):
@@ -6,7 +7,7 @@ class Country(models.Model):
     country_code = models.CharField('Code', max_length=10, null=True)
     country_iso_code_short = models.CharField('ISO Code Short', max_length=2, null=True)
     country_iso_code_long = models.CharField('ISO Code Long', max_length=3, null=True)
-    country_createdate=models.DateTimeField(auto_now_add=True)
+    country_createdate=models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.country_name
