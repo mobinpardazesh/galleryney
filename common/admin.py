@@ -4,14 +4,14 @@ from .models import Country, Provience, City
 
 @admin.register(Country)
 class CountryAdmin(admin.ModelAdmin):
-    list_display = ("country_name","country_code","country_iso_code_short","country_iso_code_long","country_createdate")
+    list_display = ("is_country_active","country_name","country_code","country_center","country_iso_code_short","country_iso_code_long","country_createdate")
 
 
 @admin.register(Provience)
 class ProvienceAmin(admin.ModelAdmin):
-    list_display = ("provience_name","id")
+    list_display = ("is_provience_active","provience_name","provience_center","provience_center_code","is_country_center","provience_createdate")
 
 
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
-    list_display = ("city_name",)
+    list_display = ("is_city_active","city_name","is_provience_center","city_createdate")
