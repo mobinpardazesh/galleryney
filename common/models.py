@@ -12,7 +12,7 @@ class Countries(models.Model):
 
 class Proviences(models.Model):
     provience_name = models.CharField(max_length=200)
-
+    countries = models.ForeignKey(Countries, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.provience_name
