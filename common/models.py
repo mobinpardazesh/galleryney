@@ -10,7 +10,6 @@ class Country(models.Model):
     country_iso_code_short = models.CharField('ISO Code Short', max_length=2, null=True)
     country_iso_code_long = models.CharField('ISO Code Long', max_length=3, null=True)
     country_createdate=models.DateTimeField(default=timezone.now)
-
     def __str__(self):
         return self.country_name
 
