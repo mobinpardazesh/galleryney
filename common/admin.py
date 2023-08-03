@@ -9,9 +9,9 @@ class CountriesAdmin(admin.ModelAdmin):
 
 @admin.register(Proviences)
 class ProviencesAmin(admin.ModelAdmin):
-    list_display = ("provience_name",)
+    list_display = ("provience_name","countries")
 
 
 @admin.register(Cities)
 class CitiesAdmin(admin.ModelAdmin):
-    list_display = ("citoes_name",)
+    list_display = ("city_name",)
