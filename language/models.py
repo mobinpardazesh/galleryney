@@ -6,4 +6,4 @@ class Language (models.Model):
     languagename=models.CharField(max_length=100)
 
     def __str__(self):
-        self.languagename
+     return  self.languagename
