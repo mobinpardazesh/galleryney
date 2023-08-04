@@ -7,7 +7,7 @@ from language.models import Language
 
 # Create your models here.
 
-class Store (models.Model):
+class Storemodel (models.Model):
     storename=models.CharField(max_length=100)
     storecompanyname=models.CharField(max_length=100)
     storeURL=models.URLField(max_length=200)
