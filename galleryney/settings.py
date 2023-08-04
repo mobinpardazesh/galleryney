@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'forums',
     'helpers',
     'home',
+    'language',
     'localization',
     'loging',
     'manufacturers',

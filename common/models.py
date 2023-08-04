@@ -1,5 +1,9 @@
 from django.db import models
 from django.utils import timezone
+
+from stores.models import Store
+
+
 # Create your models here.
 
 class Country(models.Model):
@@ -9,6 +13,12 @@ class Country(models.Model):
     country_center=models.CharField('Country Center',max_length=200,null=True)
     country_iso_code_short = models.CharField('ISO Code Short', max_length=2, null=True)
     country_iso_code_long = models.CharField('ISO Code Long', max_length=3, null=True)
+    country_numeric_code = models.CharField('Numeric Code', max_length=3, null=True)
+    allowsbilling=models.BooleanField(default=True)
+    allowsshipping=models.BooleanField(default=True)
+    displayorder=models.IntegerField(max_length=10 ,null=True)
+    limitedtostores=models.ForeignKey(Store,on_delete=models.CASCADE)
+    numberofproviences=models.IntegerField(max_length=10 ,null=True)
     country_createdate=models.DateTimeField(default=timezone.now)
     def __str__(self):
         return self.country_name
@@ -35,3 +45,5 @@ class City(models.Model):
 
     def __str__(self):
         return self.city_name
+
+
