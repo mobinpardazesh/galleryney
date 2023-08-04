@@ -22,7 +22,7 @@ class Countrymodel(models.Model):
     # limitedtostores=stores.models.ForeignKey(stores.models.Storemodel,on_delete=models.CASCADE)
     def __str__(self):
         return self.country_name
-
+#
 class Proviencemodel(models.Model):
     is_provience_active=models.BooleanField(default=True)
     provience_name = models.CharField('Provience',max_length=200,null=True)
