@@ -1,7 +1,7 @@
 from django.db import models
 # from django.utils import timezone
 
-from common.models import Country, Provience, City
+from common.models import Countrymodel, Proviencemodel, Citymodel
 from language.models import Language
 
 
@@ -15,9 +15,9 @@ class Storemodel (models.Model):
     hostvalues=models.CharField(max_length=200)
     defaultlanguage=models.ForeignKey(Language,on_delete=models.CASCADE)
     displayorder=models.IntegerField(max_length=5)
-    storecountryname=models.ForeignKey(Country,on_delete=models.CASCADE)
-    storeproviencename=models.ForeignKey(Provience,on_delete=models.CASCADE)
-    storecityname=models.ForeignKey(City,on_delete=models.CASCADE)
+    storecountryname=models.ForeignKey(Countrymodel,on_delete=models.CASCADE)
+    storeproviencename=models.ForeignKey(Proviencemodel,on_delete=models.CASCADE)
+    storecityname=models.ForeignKey(Citymodel,on_delete=models.CASCADE)
     storeaddress=models.CharField(max_length=200)
     storephonenumber=models.CharField(max_length=100)
     storevat=models.IntegerField(max_length=2)
